@@ -5,6 +5,9 @@ const cheerio = require('cheerio');
 
 const request = require('request');
 
+const config = require('./config.json')
+const command = require('./command')
+
 bot.login(process.env.token);
 
 const PREFIX = 'h!';
