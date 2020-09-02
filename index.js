@@ -24,10 +24,9 @@ bot.on('message', message => {
         image(message);
  
         break;
-
-
     }
 });
+ 
 
 function image(message){
  
@@ -67,4 +66,6 @@ function image(message){
         // Send result
         message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
+ 
+
 }
