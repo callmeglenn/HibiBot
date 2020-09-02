@@ -53,12 +53,4 @@ function image(message){
         // Send result
         message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
- 
-    module.exports.config = {
-        name: "pic",
-        description: "",
-        usage: "h!pic",
-        accessableby: "Members",
-        aliases: []
-    }
 }
