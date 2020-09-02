@@ -7,7 +7,7 @@ const prefix = `h!`;
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
-    console.log(`${bot.user.username} is online`)
+    console.log(`Roger, ${bot.user.username}, heading out.`)
     bot.user.setActivity("h!help", {type: "STREAMING", url:"https://twitch.tv/HibikiSpring"});
 })
 
@@ -276,11 +276,7 @@ function image(message){
         message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
  
-    bot.on('message', message=> {
-        if (message.isMentioned(client.user)) {
-        message.reply('Commander, what is it?');
-    }
-    });
+ 
  
  
  
