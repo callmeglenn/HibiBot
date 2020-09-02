@@ -1,9 +1,11 @@
 const Discord = require ('discord.js');
 const bot = new Discord.Client();
+const fs = require("fs");
 
-const cheerio = require('cheerio');
+clientInformation.commands = new Discord.Collection();
+clientInformation.alliases = new Discord.Collection();
 
-const request = require('request');
+client.categories = fs.addirSync("./commands/");
 
 bot.login(process.env.token);
 
@@ -11,66 +13,12 @@ const PREFIX = 'h!';
 
 bot.on('ready', () =>{
     console.log('Roger, Hibiki, heading out.');
-    bot.user.setActivity('h!pic', { type: 'PLAYING'}).catch(console.error);
-
-})
-
-bot.on('message', message => {
- 
-    let args = message.content.substring(PREFIX.length).split(" ");
- 
-    switch (args[0]) {
-        case 'pic':
-        image(message);
- 
-        break;
-    }
- 
-});
- 
-
-function image(message){
- 
-    var options = {
-        url: "http://results.dogpile.com/serp?qc=images&q=" + "Hibiki (Kantai Collection)",
-        method: "GET",
-        headers: {
-            "Accept": "text/html",
-            "User-Agent": "Chrome"
+    
+    client.user.setPresence({
+        status: "online",
+        game: {
+            name: "h!help",
+            type: "STREAMING"
         }
-    };
- 
- 
- 
- 
- 
-    request(options, function(error, response, responseBody) {
-        if (error) {
-            return;
-        }
- 
- 
-        $ = cheerio.load(responseBody);
- 
- 
-        var links = $(".image a.link");
- 
-        var urls = new Array(links.length).fill(0).map((v, i) => links.eq(i).attr("href"));
-       
-        console.log(urls);
- 
-        if (!urls.length) {
-           
-            return;
-        }
- 
-        // Send result
-        message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
- 
- 
- 
- 
- 
- 
-}
+});
