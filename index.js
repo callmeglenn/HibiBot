@@ -67,7 +67,15 @@ function image(message){
         message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
  
- 
+    switch (args[0]) {
+        case 'help':
+            const help = new Discord.RichEmbed()
+            .addTitle('Commander, your orders please.')
+            .addField
+            .setColor
+            .setFooter('HibiBot by Hibiki#2879')
+            message.channel.sendEmbed(embed);
+    }
  
  
  
