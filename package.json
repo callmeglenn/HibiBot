@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Hibiki",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HibikiSpring/HibiBot.git"
+  },
+  "author": "HibikiSpring",
   "license": "ISC",
-  "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
-    "discord.js": "^12.3.1",
-    "request": "^2.88.2"
-  }
+  "bugs": {
+    "url": "https://github.com/HibikiSpring/HibiBot/issues"
+  },
+  "homepage": "https://github.com/HibikiSpring/HibiBot#readme"
 }
