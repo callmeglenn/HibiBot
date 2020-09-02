@@ -24,6 +24,8 @@ bot.on('message', message => {
         image(message);
  
         break;
+
+        
     }
 });
 
@@ -32,7 +34,7 @@ bot.on('message', message => {
     let args = message.content.substring(PREFIX.length).split(" ");
  
     switch (args[0]) {
-        case 'embed':
+        case 'help':
             const help = new Discord.RichEmbed()
             .addTitle('Commander, your orders please.')
             .addField('Commands: help, pic')
@@ -41,6 +43,8 @@ bot.on('message', message => {
             .setFooter('HibiBot by Hibiki#2879')
             message.channel.sendEmbed(embed);
         break;
+
+
     }
 });
 
