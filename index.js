@@ -11,7 +11,7 @@ const PREFIX = 'h!';
 
 bot.on('ready', () =>{
     console.log('Roger, Hibiki, heading out.');
-    bot.user.setActivity('h!pic', { type: 'STREAMING'}).catch(console.error);
+    bot.user.setActivity('h!pic', { type: 'PLAYING'}).catch(console.error);
 
 })
 
