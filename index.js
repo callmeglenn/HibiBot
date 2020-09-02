@@ -25,7 +25,7 @@ bot.on('message', message => {
  
         break;
 
-        
+
     }
 });
 
@@ -35,7 +35,7 @@ bot.on('message', message => {
  
     switch (args[0]) {
         case 'help':
-            const help = new Discord.RichEmbed()
+            const embed = new Discord.RichEmbed()
             .addTitle('Commander, your orders please.')
             .addField('Commands: help, pic')
             .addField('Prefix: h!')
