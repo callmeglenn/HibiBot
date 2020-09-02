@@ -26,7 +26,23 @@ bot.on('message', message => {
         break;
     }
 });
+
+bot.on('message', message => {
  
+    let args = message.content.substring(PREFIX.length).split(" ");
+ 
+    switch (args[0]) {
+        case 'help':
+            const help = new Discord.RichEmbed()
+            .addTitle('Commander, your orders please.')
+            .addField('Commands: help, pic')
+            .addField('Prefix: h!')
+            .setColor(0xF1C40F)
+            .setFooter('HibiBot by Hibiki#2879')
+            message.channel.sendEmbed(embed);
+        break;
+    }
+});
 
 function image(message){
  
