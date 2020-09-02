@@ -41,7 +41,7 @@ bot.on('message', message => {
             .addField('Prefix: h!')
             .setColor(0xF1C40F)
             .setFooter('HibiBot by Hibiki#2879')
-            message.channel.send();
+            message.channel.sendembed();
         break;
 
 
