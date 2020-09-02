@@ -15,6 +15,19 @@ bot.on('ready', () =>{
 
 })
 
+module.exports.run = async (bot, message, args) => {
+    let helpArray = message.content.split(" ");
+    let helpArgs = helpArray.slice(1);
+
+    if(helpArgs[0]) {
+        var embed = new Discord.MessageEmbed()
+            .setAuthor('Commander, your orders please.')
+            .setDescription('```help | pic```')
+            .addFields({ name: 'Prefix', value: '```h!```', inline: true})
+            .setColor('#00FFF3')
+    }
+}
+
 bot.on('message', message => {
  
     let args = message.content.substring(PREFIX.length).split(" ");
