@@ -11,13 +11,9 @@ const PREFIX = 'h!';
 
 bot.on('ready', () =>{
     console.log('Roger, Hibiki, heading out.');
-    if (config.activity.streaming == true) {
-        bot.user.setActivity(config.activity.game, {url: 'https://twitch.tv/HibikiSpring'});
-      } else {
-        bot.user.setActivity(config.activity.game, {type: 'PLAYING'});//PLAYING, LISTENING, WATCHING
-        bot.user.setStatus('online'); // dnd, idle, online, invisible
-      }
-    });
+    bot.user.setActivity('h!pic', { type: 'STREAMING'}).catch(console.error);
+
+})
 
 bot.on('message', message => {
  
