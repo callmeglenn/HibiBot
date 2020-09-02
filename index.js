@@ -71,9 +71,7 @@ function image(message){
     });
  
 }
-command(client, 'embed', (message) => {
-    const logo =
-      'https://yt3.ggpht.com/a-/AOh14GgD43Ka7oxkCrxPAXiIuY8-rG3Kb4h9dQuhulOH=s100-c-k-c0xffffffff-no-rj-mo'
+command(bot, 'embed', (message) => {
 
     const embed = new Discord.MessageEmbed()
       .setTitle('Commander, your orders please.')
