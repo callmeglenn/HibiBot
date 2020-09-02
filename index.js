@@ -276,7 +276,7 @@ function image(message){
         message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
  
-    client.on('message', message=> {
+    bot.on('message', message=> {
         if (message.isMentioned(client.user)) {
         message.reply('Commander, what is it?');
     }
