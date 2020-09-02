@@ -12,7 +12,7 @@ const PREFIX = 'h!';
 bot.on('ready', () =>{
     console.log('Roger, Hibiki, heading out.');
     
-    client.user.setActivity({
+    bot.user.setActivity({
         status: "online",
         game: {
             name: "h!help",
