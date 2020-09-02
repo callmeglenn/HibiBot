@@ -31,17 +31,17 @@ bot.on('message', message => {
 
 bot.on('message', message => {
  
-    let args = message.content.substring(PREFIX.length).split(" ");
+    let args = message.content.slice(prefix.length).split(' ');
  
     switch (args[0]) {
         case 'embed':
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
             .addTitle('Commander, your orders please.')
             .addField('Commands: help, pic')
             .addField('Prefix: h!')
             .setColor(0xF1C40F)
             .setFooter('HibiBot by Hibiki#2879')
-            message.channel.sendEmbed(embed);
+            message.channel.send(embed);
         break;
 
 
