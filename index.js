@@ -283,4 +283,4 @@ function image(message){
  
 }
 
-bot.login(botsettings.token);
+bot.login(process.env.TOKEN);
