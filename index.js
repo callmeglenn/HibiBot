@@ -78,6 +78,3 @@ function image(message){
  
  
 }
- 
- 
-bot.login(token);
