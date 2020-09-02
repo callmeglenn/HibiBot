@@ -15,6 +15,29 @@ bot.on('ready', () =>{
 
 })
 
+bot.on('message', message => {
+ 
+    let args = message.content.substring(PREFIX.length).split(" ");
+ 
+    switch (args[0]) {
+        case 'pic':
+        image(message);
+ 
+        break;
+    }
+ 
+    switch (args[0]) {
+        case 'help':
+            const help = new Discord.RichEmbed()
+            .addTitle('Commander, your orders please.')
+            .addField
+            .setColor
+            .setFooter('HibiBot by Hibiki#2879')
+            message.channel.sendEmbed(embed);
+    }
+});
+ 
+
 function image(message){
  
     var options = {
@@ -53,4 +76,10 @@ function image(message){
         // Send result
         message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
+ 
+ 
+ 
+ 
+ 
+ 
 }
