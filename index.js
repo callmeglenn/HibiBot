@@ -44,6 +44,13 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(embed);
 }}    
 
+module.exports.config = {
+    name: "help",
+    description: "",
+    usage: "h!help",
+    accessableby: "Members",
+    aliases: []
+}
 
 bot.on('message', message => {
  
