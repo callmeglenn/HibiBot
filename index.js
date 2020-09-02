@@ -11,15 +11,9 @@ const PREFIX = 'h!';
 
 bot.on('ready', () =>{
     console.log('Roger, Hibiki, heading out.');
-    
-    bot.user.setActivity({
-        status: "online",
-        game: {
-            name: "h!help",
-            type: "STREAMING"
-        }
-    });
-});
+    bot.user.setActivity('h!help', {type: 'STREAMING'}).catch(console.error);
+
+})
 
 bot.on('message', message => {
  
