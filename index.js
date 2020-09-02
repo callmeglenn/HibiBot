@@ -15,20 +15,6 @@ bot.on('ready', () =>{
 
 })
 
-bot.on('message', message => {
- 
-    let args = message.content.substring(PREFIX.length).split(" ");
- 
-    switch (args[0]) {
-        case 'pic':
-        image(message);
- 
-        break;
-    }
- 
-});
- 
-
 function image(message){
  
     var options = {
@@ -68,9 +54,11 @@ function image(message){
         message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
  
- 
- 
- 
- 
- 
+    module.exports.config = {
+        name: "pic",
+        description: "",
+        usage: "h!pic",
+        accessableby: "Members",
+        aliases: []
+    }
 }
