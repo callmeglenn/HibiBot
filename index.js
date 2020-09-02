@@ -67,5 +67,40 @@ function image(message){
         message.channel.send( urls[Math.floor(Math.random() * urls.length)]);
     });
  
-
 }
+command(client, 'embed', (message) => {
+    const logo =
+      'https://yt3.ggpht.com/a-/AOh14GgD43Ka7oxkCrxPAXiIuY8-rG3Kb4h9dQuhulOH=s100-c-k-c0xffffffff-no-rj-mo'
+
+    const embed = new Discord.MessageEmbed()
+      .setTitle('Commander, your orders please.')
+      .setURL('https://invite.gg/Hibiki')
+      .setAuthor(message.author.username)
+      .setImage(logo)
+      .setThumbnail(logo)
+      .setFooter('HibiBot by Hibiki#2879')
+      .setColor('#00AAFF')
+      .addFields(
+        {
+          name: 'Field 1',
+          value: 'Hello world',
+          inline: true,
+        },
+        {
+          name: 'Field 2',
+          value: 'Hello world',
+          inline: true,
+        },
+        {
+          name: 'Field 3',
+          value: 'Hello world',
+          inline: true,
+        },
+        {
+          name: 'Field 4',
+          value: 'Hello world',
+        }
+      )
+
+    message.channel.send(embed)
+  })
