@@ -3,6 +3,7 @@ const botsettings = require('./botsettings.json');
 const cheerio = require('cheerio');
 const request = require('request');
 const prefix = `h!`;
+const triviaResponses = ["Hello", "Hi", "Hi there"];
 
 const bot = new Discord.Client({disableEveryone: true});
 
@@ -287,5 +288,27 @@ function image(message){
  
  
 }
+
+// The onMessage event handler
+Bot.on('message', function (message) {
+    // It is considered bad practice to let your bot react to other bots.
+    if (message.author.bot) return;
+
+    // If a message doesn't start with your bot's prefix, don't bother going through the cases.
+    if (!message.content.startsWith("h!")) return;
+
+    // Args length check. #1 is the command, #2 and higher are the arguments
+    var args = message.content.substring("h!".length).split(" ");
+
+    switch (args[0].toLowerCase()) {
+        case "trivia":
+            var response = triviaResponses [Math.floor(Math.random()*triviaResponses .length)];
+
+            message.channel.send(response).then().catch(console.error);
+            break;
+        default:
+            break;
+    }
+});
 
 bot.login(botsettings.token);
