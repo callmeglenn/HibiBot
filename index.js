@@ -10,9 +10,10 @@ bot.on("ready", async () => {
     console.log(`Roger, ${bot.user.username}, heading out.`);
     if (botsettings.activity.streaming == true) {
         bot.user.setActivity(botsettings.activity.game, {url: 'https://twitch.tv/HibikiSpring'});
-    } else {
-      bot.user.setActivity('h!help', {type: 'WATCHING'}); // PLAYING, LISTENING, WATCHING
-      bot.user.setStatus('dnd'); // dnd, idle, online, invinsible
+    }
+    if (botsettings.activity.streaming == false) {
+        bot.user.setActivity(botsettings.activity.game, {type: 'WATCHING'}); // PLAYING, LISTENING, WATCHING
+        bot.user.setStatus('dnd'); // dnd, idle, online, invinsible
     }
 });
 
