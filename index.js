@@ -9,7 +9,7 @@ const bot = new Discord.Client({disableEveryone: true});
 bot.on("ready", async () => {
     console.log(`Roger, ${bot.user.username}, heading out.`);
     if (botsettings.activity.streaming == true) {
-        bot.user.setActivity(botsettings.activity.game, {url: 'https://twitch.tv/HibikiSpring'});
+        bot.user.setActivity(botsettings.activity.game, {type: 'STREAMING', url: 'https://twitch.tv/HibikiSpring'});
     } else {  
       bot.user.setActivity(botsettings.activity.game, {type: 'WATCHING'}); // PLAYING, LISTENING, WATCHING
       bot.user.setStatus('dnd'); // dnd, idle, online, invinsible
