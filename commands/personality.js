@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "trivia",
+    name: "personality",
     description: "Get a random characteristics of Hibiki.",
     usage: "h!personality",
     accessableby: "Members",
