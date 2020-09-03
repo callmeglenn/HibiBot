@@ -8,7 +8,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 bot.on("ready", async () => {
     console.log(`Roger, ${bot.user.username}, heading out.`)
-    bot.user.setActivity(`h!help`, {type: `STREAMING`, url:"https://twitch.tv/HibikiSpring"});
+    bot.user.setActivity(`h!help`, {type: "STREAMING", url:"https://twitch.tv/HibikiSpring"});
 })
 
 const fs = require("fs");
