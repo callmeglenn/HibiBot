@@ -3,7 +3,7 @@
     "prefix": "h!",
 
     "activity": {
-        "streaming": true,
+        "streaming": false,
         "game": "h!help"
     }
 }
