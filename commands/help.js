@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
         var embed = new Discord.MessageEmbed()
             .setTitle(`Here is the Available Commands to use:`)
             .setAuthor(`Commander, your orders please.`)
-            .setDescription('```help | img```')
+            .setDescription('```help | image```')
             .addFields({ name: 'Prefix', value: '```h!```', inline: true})
             .setColor('#00FFF3')
             

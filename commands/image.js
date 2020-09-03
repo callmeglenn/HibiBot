@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
         .setURL('http://invite.gg/Hibiki')
         .setAuthor('Commander, your orders please.')
         .setDescription('These commands will have different image results.')
-        .setColor('#FF2D00')
+        .setColor('#00FFF3')
         .setFooter('HibiBot by Hibiki#2879')
         .addFields(
             { name: 'Hibiki (KanColle)', value: 'h!hibiki', inline: true},
@@ -21,9 +21,9 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.config = {
-        name: "img",
+        name: "image",
         description: "Get a random Hibiki/Verniy from Kancolle: Kantai Collection image on Google.",
-        usage: "h!img",
+        usage: "h!image",
         accessableby: "Members",
-        aliases: []
+        aliases: [`img`]
     }
