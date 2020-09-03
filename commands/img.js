@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
         name: "img",
-        description: "Get a random Hibiki/Verniy from Kancolle: Kantai Collection image on Google.",
+        description: "Get a random image of Hibiki/Verniy from Kancolle: Kantai Collection on Google.",
         usage: "h!img",
         accessableby: "Members",
         aliases: [`image`]
