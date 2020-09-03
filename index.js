@@ -12,7 +12,7 @@ bot.on("ready", async () => {
         bot.user.setActivity(botsettings.activity.game, {type: 'STREAMING', url: 'https://twitch.tv/HibikiSpring'});
     } else {
       bot.user.setActivity(botsettings.activity.game, {type: 'WATCHING'}); // PLAYING, LISTENING, WATCHING
-      bot.user.setStatus('invinsible'); // dnd, idle, online, invinsible
+      bot.user.setStatus('dnd'); // dnd, idle, online, invinsible
     }
 });
 
