@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
             .setAuthor(`Commander, your orders please.`)
             .setDescription('```help | image```')
             .addFields({ name: 'Prefix', value: '```h!```', inline: true})
-            .setColor('#00FFF3')
+            .setColor('#afddfa')
             
         message.channel.send(embed);
     }
@@ -37,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
             - **Command's Permissions:** __${command.config.accessableby || "Members"}__
             - **Command's Aliases:** __${command.config.aliases || "No Aliases"}__
             `)
-            .setColor('#2EFF00')
+            .setColor('#c0c0c0')
 
         message.channel.send(embed);
     }}

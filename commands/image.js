@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
         .setURL('http://invite.gg/Hibiki')
         .setAuthor('Commander, your orders please.')
         .setDescription('These commands will have different image results.')
-        .setColor('#00FFF3')
+        .setColor('#eebbee')
         .setFooter('HibiBot by Hibiki#2879')
         .addFields(
             { name: 'Hibiki (KanColle)', value: 'h!hibiki', inline: true},
