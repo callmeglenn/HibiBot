@@ -21,6 +21,8 @@ bot.on("ready", async () => {
     }
 });
 
+require('events').EventEmitter.defaultMaxListeners = 0;
+
 const fs = require("fs");
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
