@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor('#eebbee')
         .setFooter('HibiBot by Hibiki#2879')
         .addFields(
-            { name: 'Name', value: 'Link'},
+            { name: 'Hibimotes', value: 'https://discord.gg/Q8rBhVf'},
             { name: 'Name', value: 'Link'}
         )
         .setTimestamp()
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.config = {
     name: "partner",
-    description: "A look of partnership between Hibiki Academy and others",
+    description: "A list of partnership between Hibiki Academy and others",
     usage: "h!partner",
     accessableby: "Members",
     aliases: [`partner`]
