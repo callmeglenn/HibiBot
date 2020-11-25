@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle('Here is the current partnership list:')
         .setURL('http://invite.gg/Hibiki')
         .setAuthor('Commander, your orders please.')
-        .setDescription('These are our partnership.')
+        .setDescription('These are our partner.')
         .setColor('#eebbee')
         .setFooter('HibiBot by Hibiki#2879')
         .addFields(
