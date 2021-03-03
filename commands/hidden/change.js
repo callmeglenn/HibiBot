@@ -24,8 +24,7 @@ module.exports = {
 
         let role = message.guild.roles.cache.get(data.color_role.roleId)
         if (!role) {
-            const position = message.member.roles.highest.position > message.guild.me.roles.highest.position ?
-                message.guild.me.roles.highest.position : message.member.roles.highest.position
+            const position = message.guild.me.roles.highest.position
             role = await message.guild.roles.create({ data: { name: message.author.id, position, color: color.length ? color : 'wdd' } })
             message.member.roles.add(role.id)
             return await mongo.cr.create(role.id, color)
