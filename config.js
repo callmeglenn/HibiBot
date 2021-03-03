@@ -28,7 +28,7 @@ module.exports = {
     modmail: {
         // the ids that will be permitted to view the newly created ticket channel, members who accept the report are automatically allowed to view the channel
         // ids can either be a member or a role
-        permissionIds: [],
+        permissionIds: ['574642435184132096', '574642646853615626', '682331131500429532'],
         // the channel id where all new modmail messages will be sent to
         channelId: '816179015026999386',
         category: {
