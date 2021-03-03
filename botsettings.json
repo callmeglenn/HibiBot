@@ -1,9 +1,0 @@
-{
-    "token": "NzUwNTU2NjkwMTI2MjA5MTU0.X08QYw.3OwI_VqDxokjCXIAMAyvPi9wqNM",
-    "prefix": "h!",
-
-    "activity": {
-        "streaming": true,
-        "game": "h!help"
-    }
-}
