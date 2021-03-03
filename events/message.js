@@ -32,7 +32,7 @@ module.exports = async function (client, message) {
         // Permissions
         if (command.permissions) {
             if (typeof command.permissions == 'string') command.permissions = [command.permissions]
-            for (const permission of permissions) if (!member.permissions.has(permission)) return channel.send(member, embed.setDescription(`You do not have the permission \`${permission}\` to use this command`))
+            for (const permission of command.permissions) if (!member.permissions.has(permission)) return channel.send(member, embed.setDescription(`You do not have the permission \`${permission}\` to use this command`))
         }
         // Guild Owner
         if (command.owner && member.id !== guild.ownerID) return
