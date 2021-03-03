@@ -6,8 +6,7 @@ module.exports = {
     hidden: true,
     run: async function (message) {
         message.delete()
-        const position = message.member.roles.highest.position > message.guild.me.roles.highest.position ?
-        message.guild.me.roles.highest.position : message.member.roles.highest.position
+        const position = message.member.roles.highest.position > message.guild.me.roles.highest.position
 
         const mongo = new MongoUser(message.guild.id, message.author.id)
         const data = await mongo.get()
