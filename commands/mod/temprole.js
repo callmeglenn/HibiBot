@@ -7,7 +7,7 @@ module.exports = {
     description: "Temporarily awards someone a role which will be removed after time is up, duration will increased if used again",
     minArgs: 3,
     expectedArgs: '<@member/id> <duration> <@&role>',
-    permissions: 'MANAGE_MEMBERS',
+    permissions: 'MANAGE_ROLES',
     category: 'mod',
     run: async function(message, args) {
         const { guild, channel } = message
