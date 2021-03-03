@@ -10,7 +10,7 @@ client.commands = new Discord.Collection()
 const { registerEvents, registerCommands } = require('./utils/registry')
 client.once('ready', async function () {
     console.log("Connected to Discord")
-    await mongo().then(function(mongoose) {
+    await mongo().then(async function(mongoose) {
         console.log('Connected to Mongo')
         await mongoose.connection.close()
     })
