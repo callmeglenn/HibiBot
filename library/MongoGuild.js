@@ -6,7 +6,9 @@ module.exports = class guild {
     }
     async get() {
         await mongo()
-        return await schema.findOne({ guildId: this.guildId })
+        let data = await schema.findOne({ guildId: this.guildId })
+        if (!data) data = await new schema({ guildId: this.guildId })
+        return data
     }
     async addTicket() {
         await mongo()
