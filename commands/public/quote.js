@@ -35,7 +35,7 @@ const responses = [
     "My true name is Hibiki... до свидания... Goodbye."
 ]
 module.exports = {
-    name: 'seasonalquote',
+    name: 'quote',
     description: "Get a random quote from Hibiki.",
     category: 'public',
     run: async function (message) {
