@@ -1,6 +1,6 @@
 module.exports = {
     prefix: `h!`,
-    token: `ODE2MjA4MjYxMzgzODQ3OTc3.YD3nLQ.g0d8SA2rGdDBj-dUeLc9ao7WNSg`,
+    token: `TOKEN`,
     mongoPath: `mongodb+srv://HibikiSpring:T0114766d@cluster0.mtjxe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
 
     activity: {
