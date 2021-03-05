@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const MongoUser = require('../../library/MongoUser')
+const config = require('../../config')
 module.exports = {
     name: 'leaderboard',
     aliases: ['lb'],
@@ -13,7 +14,7 @@ module.exports = {
 
         const members = data.slice(0, 10)
         members.sort((b, a) => (a.xp + (a.level * 100)) - (b.xp + (b.level * 100)))
-        for (i = 0; i < members.length; i++) members.splice(i, 1, `**${i + 1}.** <@${members[i].userId}>\nLevel **${members[i].level}**`)
+        for (i = 0; i < members.length; i++) members.splice(i, 1, `**${i + 1}.** <@${members[i].userId}>\nLevel **${members[i].level}**\nXP **${members[i].xp}**/**${config.level.base + (members[i].level * config.level.multiplier)}`)
         return channel.send(embed.setDescription(members.join('\n\n')))
     }
 }
